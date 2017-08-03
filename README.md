@@ -8,5 +8,5 @@ AMP(Accelerated Mobile Page)로 제작되었다.
 JYPBar의 메뉴판
 
 ## 자료출처
-Main slide images from [pexels](https://www.pexels.com) CC0 License
-Cocktail recipes and Liquor information from [나무위키](https://namu.wiki) CC BY-NC-SA 2.0 KR
+* Main slide images from [pexels](https://www.pexels.com) CC0 License
+* Cocktail recipes and Liquor information from [나무위키](https://namu.wiki) CC BY-NC-SA 2.0 KR
