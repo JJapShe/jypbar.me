@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log
+.*
+!.gitignore
+*.css.map
+Thumbs.db
+*.psd
+*.zip

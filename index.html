@@ -54,9 +54,15 @@
         .slide_first {background-image:url('/images/slide_01.jpg');}
         .slide_second {background-image:url('/images/slide_02.jpg');}
         .slide_third {background-image:url('/images/slide_03.jpg');}
-        .amp-carousel-button {display:none;}
+        .amp-carousel-button {top:auto; bottom:3%;}
+        .main_slide .amp-carousel-button {display:none;}
         .slide_txt {position:absolute;top:25vh;width:100vw;left:50%;margin-left:-50vw;}
         .slide_txt h1 {font-size:3.5rem;font-weight:bold;color:#fff;text-align:center;text-shadow:#333 3px 3px 1px;}
+		.slide_txt .icon_scroll {font-size:1.2rem; bottom:-10vh; animation:1s bottomtop alternate infinite; }
+		@keyframes bottomtop {
+			0% {transform:translate(0%, 5vb);}
+			100% {transform:translate(0%, 8vh);}
+		}
 		
 		.menu-fluid h2 {height:80px;padding:15px 0;font-size:28px;text-align:center;line-height:50px;}
 		amp-accordion h3 {padding:13px 0 10px;border-bottom:0;font-size:18px;text-align:center;}
@@ -79,7 +85,7 @@
 		.btn_reserve a:link, .btn_reserve a:link {color:#333;}
 		
 		@media screen and (min-width:481px) {
-			.slide h4 {font-size:2rem; }
+			.slide h4 {font-size:1.7rem; }
 			.slide p {font-size:1rem; }
 		}
     </style>
@@ -106,6 +112,7 @@
             </amp-carousel>
             <div class="slide_txt">
                 <h1>JYPBar.</h1>
+                <p class="icon_scroll">Scroll ⇣</p>
             </div>
         </div>
         <div class="menu-fluid">
@@ -114,7 +121,7 @@
 				<section>
 					<h3>Cocktail</h3>
 					<div>
-						<amp-carousel id="carousel-with-carousel-preview" width="640px" height="480px" layout="responsive" type="slides" loop>
+						<amp-carousel id="carousel-with-carousel-preview" width="640px" height="480px" layout="responsive" type="slides" controls loop>
 							<div class="slide">
 								<amp-img src="/images/mojito.jpg" height="320px" layout="fixed-height" alt=""></amp-img>
 								<div class="caption">
@@ -147,6 +154,26 @@
 									<p>얼음이 든 하이볼 글라스 혹은 온더락 글라스를 준비한다. 잔에 내용물을 차례대로 부어서 잘 섞이게 저어주면 끝. (빌드기법) <br />칵테일은 기주 → 믹서의 순서로 부어준다. 즉 깔루아 먼저 붓고 그 위에 우유를 부어줄 것. 이렇게 하면 살짝 층이 져서 보기에 좋다. 하지만 결국 저어서 섞어먹는 건 똑같다. 우유를 먼저 넣으면 층은 잘 안나서 약간 비주얼이 딸리지만 맛은 별 차이가 없으니 편한대로.</p>
 								</div>
 							</div>
+							<div class="slide">
+								<amp-img src="/images/kalua_milk.jpg" height="320px" layout="fixed-height" alt=""></amp-img>
+								<div class="caption">
+									<h4>미도리 사워</h4>
+									<p>미도리 1oz + 스윗앤사워믹스 1oz + 스프라이트</p>
+									<p>1. 얼음을 채워둔 사워 글래스에 미도리 1온스를 넣는다.<br />
+										2. 스윗 앤 사워 믹스 1온스를 넣는다.<br />
+										3. 스프라이트로 나머지를 채운 뒤 살짝 저어준다.<br />
+										4. 레몬 또는 체리로 장식하면 완성.
+									</p>
+								</div>
+							</div>
+							<div class="slide">
+								<amp-img src="/images/kalua_milk.jpg" height="320px" layout="fixed-height" alt=""></amp-img>
+								<div class="caption">
+									<h4>블루 하와이</h4>
+									<p>럼 30ml + 블루 큐라소 15 ml + 파인애플 주스 30 ml + 라임주스 10 ml</p>
+									<p>가볍게 흔들어 잘게 부순 얼음을 넣은 8온스 필스너 (240ml) 잔에 따르고[1] 파인애플 스틱, 체리, 스트로 등으로 장식한다. 흔들기(Shake) 기법 사용. 눈에도 입에도 청량감을 불러 일으키는 이름 그대로 하와이에서 태어났다. 1961년 개봉된 엘비스 프레슬리 주연의 영화 '블루 하와이'에서 연유해서 만들어진 칵테일이라 생각된다. 중간 단맛. 올데이 타입. 트로피칼이 존재한다.</p>
+								</div>
+							</div>
 						</amp-carousel>
 						<!--<amp-carousel class="carousel-preview" width="auto" height="50px" layout="fixed-height" type="carousel">
 							<button on="tap:carousel-with-carousel-preview.goToSlide(index=0)">
@@ -164,7 +191,7 @@
 				<section>
 					<h3>Liquor</h3>
 					<div>
-						<amp-carousel id="carousel-with-carousel-preview" width="640px" height="480px" layout="responsive" type="slides" loop>
+						<amp-carousel id="carousel-with-carousel-preview" width="640px" height="480px" layout="responsive" type="slides" controls loop>
 							<div class="slide">
 								<amp-img src="/images/absolute_vodka.jpg" height="320px" layout="fixed-height" alt=""></amp-img>
 								<div class="caption">
@@ -294,7 +321,7 @@
 				<section>
 					<h3>Cuisine</h3>
 					<div>
-						<amp-carousel id="carousel-with-carousel-preview" width="640px" height="480px" layout="responsive" type="slides" loop>
+						<amp-carousel id="carousel-with-carousel-preview" width="640px" height="480px" layout="responsive" type="slides" controls loop>
 							<div class="slide">
 								<amp-img src="/images/buchaesal.jpg" height="320px" layout="fixed-height" alt=""></amp-img>
 								<div class="caption">
@@ -341,7 +368,7 @@
 				<section>
 					<h3>Snacks</h3>
 					<div>
-						<amp-carousel id="carousel-with-carousel-preview" width="640px" height="480px" layout="responsive" type="slides" loop>
+						<amp-carousel id="carousel-with-carousel-preview" width="640px" height="480px" layout="responsive" type="slides" controls loop>
 							<div class="slide">
 								<amp-img src="/images/huchu_salami.jpg" height="320px" layout="fixed-height" alt=""></amp-img>
 								<div class="caption">
@@ -405,8 +432,7 @@
         	Cocktail recipe and liquor infomation from <a class="namuwiki" href="https://namu.wiki/w/%EC%B9%B5%ED%85%8C%EC%9D%BC">namu.wiki</a><br />
         	Slide background images from <a class="pexels" href="https://www.pexels.com">Pexels</a>
         </p>
-        <p class="amp_power">Powered by <span><a href="https://www.ampproject.org/ko/">AMP ⚡</a></span></p>
-        <p class="github"><a href="https://github.com/JJapShe/jypbar.me">JYPBar Github</a></p>
+        <p class="amp_power">Powered by <span><a href="https://www.ampproject.org/ko/">AMP ⚡</a></span> / <a href="https://github.com/JJapShe/jypbar.me">JYPBar Github</a></p>
         <p class="btn_reserve"><a href="mailto:jjapshe@naver.com?subject=JYPBar예약문의&body=날짜:%0A방문자수:%0A연락처:%0A%0A*최소 이틀전 문의주세요!">예약문의</a></p>
     </footer>
 </body>
